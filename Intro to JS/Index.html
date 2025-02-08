@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Area Calculator</title>
+    </head>
+    <body>
+        <h1>Area Calculator</h1>
+     <script>
+        var choice = prompt("Welcome to Area Calculator. \n 1. Area of Rectangle \n 2. Area of Circle \n 3. Area of Square \n 4. Area of Triangle ");
+
+        if (choice == '1'){
+            var l = prompt('Enter the Length');
+            var b = prompt('Enter the Height');
+            var result = Number(l) * Number(b);
+            alert('The Area is ' + result)
+
+        }
+ 
+        if (choice == '2'){
+            var r = prompt('Enter the Radius');
+            var result = (22/7) * Number(r) * Number(r);
+            alert('The Area is ' + result)
+
+        }
+
+        if (choice == '3'){
+            var l = prompt('Enter the side Length');
+            var result =  Number(l) * Number(l);
+            alert('The Area is ' + result)
+
+        }
+
+        if (choice == '4'){
+            var b = prompt('Enter the Base');
+            var h = prompt('Enter the Heigth');
+            var result = (1/2) * Number(b) * Number(h);
+            alert('The Area is ' + result)
+
+        }
+
+
+
+
+     </script>
+
+    </body>
+</html>
