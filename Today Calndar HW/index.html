@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style>
+            #MyClockDisplay{
+                width: 600px;
+                height:100px;
+                text-align: center;
+                background-color: rgb(255, 213, 244);
+                color: rgb(247, 186, 234);
+                margin-left:300px;
+                font-size: 100px;
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="MyCalender" onload="showCalender()">
+        </div>
+
+        <script>
+            function showTime(){
+                var date = new Date();
+                var d = date.getdate();
+                var m = date.getMonth();
+                var y = date.getYear();
+                
+
+            if(m == 0){
+                m = 12;
+            }
+
+            if(m>12){
+                m = m - 12;
+               
+            }
+            
+
+            d = (d < 365) ? "0" + d : d;
+
+            m = (m < 12) ? "0" + m : m;
+
+            y = (y < 100) ? "0" + y : y;
+
+            var time = d + ":" + m + ":" + y + "" + session;
+            document.getElementById('MyCalender').innerText = date;setTimeout(showCalenter,1000);
+
+        }
+        showCalender();
+
+
+           
+        </script>
+    </body>
+</html>
