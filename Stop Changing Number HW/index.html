@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+<title>Rolling dice</title>
+
+<style>
+
+body {
+
+text-align: center;
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#dice {
+
+font-size: 200px;
+
+}
+
+#dice:hover {
+
+cursor: pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div>Click on the dice...</div>
+
+<div id="dice" onclick="stopstart()">
+    &#10084;
+</div>
+
+<script>
+
+var dice = document.getElementById('dice'); // Initialize dice element
+
+var dices = ['&#10084;', '&#128521;', '&#128079;', '&#127881;', '&#128640;', '&#11088;']
+
+var stopped = true;
+
+var t;
+
+function change() {
+
+var random = Math.floor(Math.random()*6);
+
+dice.innerHTML = dices[random];
+
+}
+
+function stopstart() {
+
+if(stopped){
+
+stopped = false;
+
+t = setInterval(change, 100); // Start rolling
+
+} else {
+
+clearInterval(t) // Stop rolling
+
+stopped = true;
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
